@@ -17,14 +17,17 @@ import LaunchIcon from "@mui/icons-material/Launch";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-export interface SidebarProps {}
+export interface SidebarProps {
+  gridArea: string;
+}
 
-export const Sidebar: React.FC<SidebarProps> = () => {
+export const Sidebar: React.FC<SidebarProps> = ({ gridArea }) => {
   return (
     <Box
       sx={{
         maxWidth: "370px",
         boxShadow: 3,
+        gridArea,
       }}
     >
       <Box
