@@ -3,39 +3,42 @@ import { Box, SxProps, Typography } from "@mui/material";
 import { Theme } from "@mui/system";
 
 export interface MainContentProps {
-  gridArea: string;
   title?: string;
 }
 
-const MainContent: React.FC<MainContentProps> = ({
-  gridArea,
-  title,
-  children,
-}) => {
+const MainContent: React.FC<MainContentProps> = ({ title, children }) => {
   return (
-    <Box sx={style(gridArea)}>
-      <Box className="page-title">
-        <Typography variant="h5">{title}</Typography>
+    <Box sx={style()}>
+      <Box className="wrapper">
+        <Box className="page-title">
+          <Typography variant="h5">{title}</Typography>
+        </Box>
+        <Box className="page-main-content">{children}</Box>
+        <Box component="footer">
+          © Copyright 2022 | Todos os direitos reservados
+        </Box>
       </Box>
-      <Box className="page-main-content">{children}</Box>
     </Box>
   );
 };
 
 export default MainContent;
 
-const style = (gridArea: string): SxProps<Theme> => ({
+const style = (): SxProps<Theme> => ({
   position: "relative",
   width: "100%",
-  minHeight: "70vh",
-  gridArea,
-  overflowY: "scroll",
+  height: "100%",
+  paddingLeft: "370px",
+  paddingTop: "66px",
+  ".wrapper": {},
   ".page-title": {
-    padding: "45px",
     boxShadow: 1,
+    padding: "45px",
   },
   ".page-main-content": {
     background: "#DDD",
     height: "100%",
+    minHeight: "70vh",
+    padding: "45px",
   },
 });

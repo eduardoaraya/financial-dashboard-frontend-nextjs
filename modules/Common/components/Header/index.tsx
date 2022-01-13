@@ -3,13 +3,12 @@ import { SxProps, Theme } from "@mui/system";
 import React from "react";
 
 export interface HeaderProps {
-  gridArea: string;
   avatarPhoto?: string;
 }
 
-export const Header: React.FC<HeaderProps> = ({ gridArea, avatarPhoto }) => {
+export const Header: React.FC<HeaderProps> = ({ avatarPhoto }) => {
   return (
-    <AppBar position="static" color="primary" sx={style(gridArea)}>
+    <AppBar position="static" color="primary" sx={style()}>
       <Box className="wrapper">
         <Tooltip title="Open settings">
           <IconButton>
@@ -23,9 +22,13 @@ export const Header: React.FC<HeaderProps> = ({ gridArea, avatarPhoto }) => {
 
 export default Header;
 
-const style = (gridArea: string): SxProps<Theme> => ({
+const style = (): SxProps<Theme> => ({
   boxShadow: 0,
-  gridArea,
+  position: "fixed",
+  top: 0,
+  width: "100%",
+  left: 0,
+  zIndex: 999,
   ".wrapper": {
     width: "100%",
     display: "flex",
