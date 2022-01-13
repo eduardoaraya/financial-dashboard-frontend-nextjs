@@ -15,13 +15,11 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import navigationItems from "./navigationItems";
 
-export interface SidebarProps {
-  gridArea: string;
-}
+export interface SidebarProps {}
 
-export const Sidebar: React.FC<SidebarProps> = ({ gridArea }) => {
+export const Sidebar: React.FC<SidebarProps> = () => {
   return (
-    <Box sx={style(gridArea)}>
+    <Box sx={style()}>
       <Box className="logo">
         <Typography variant="h3">Logo</Typography>
       </Box>
@@ -63,19 +61,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ gridArea }) => {
 
 export default Sidebar;
 
-const style = (gridArea: string): SxProps<Theme> => ({
+const style = (): SxProps<Theme> => ({
+  width: "100%",
   maxWidth: "370px",
   boxShadow: 3,
-  gridArea,
-
+  position: "fixed",
+  height: "100%",
+  top: "66px",
+  left: 0,
+  background: "#FFF",
+  zIndex: 99,
   ".logo": {
     height: "150px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
-
   ".navigator-list": {
-    minHeight: "70vh",
+    height: "100%",
+    minHeight: "calc(70vh - 66px)",
   },
 });

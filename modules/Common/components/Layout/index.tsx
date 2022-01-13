@@ -5,14 +5,16 @@ import Header from "../Header";
 import MainContent from "../MainContent";
 import Sidebar from "../Sidebar";
 
-export interface LayoutProps {}
+export interface LayoutProps {
+  titlePage: string;
+}
 
-export const Layout: React.FC<LayoutProps> = () => {
+export const Layout: React.FC<LayoutProps> = ({ children, titlePage }) => {
   return (
     <Box sx={style()}>
-      <Header gridArea="header" />
-      <Sidebar gridArea="sidebar" />
-      <MainContent gridArea="main" />
+      <Header />
+      <Sidebar />
+      <MainContent title={titlePage}>{children}</MainContent>
     </Box>
   );
 };
@@ -20,11 +22,7 @@ export const Layout: React.FC<LayoutProps> = () => {
 export default Layout;
 
 const style = (): SxProps<Theme> => ({
-  display: "grid",
-  gridTemplateAreas: `"header header header header"
-                      "sidebar main main main"
-                      "sidebar main main main"
-                      "siderbar footer footer footer"`,
-
-  gridTemplateColumns: "370px 1fr 1fr 1fr",
+  position: "relative",
+  height: "100%",
+  minHeight: "100vh",
 });

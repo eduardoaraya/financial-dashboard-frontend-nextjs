@@ -1,7 +1,8 @@
+import Layout from "modules/Common/components/Layout";
 import type { NextPage } from "next";
 
 const Index: NextPage = () => {
-  return <div>Home page</div>;
+  return <Layout titlePage="Home Page">Home Page</Layout>;
 };
 
 export default Index;
