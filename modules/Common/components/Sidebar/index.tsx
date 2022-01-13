@@ -7,15 +7,13 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  SxProps,
   Typography,
+  Theme,
 } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import ShowChartIcon from "@mui/icons-material/ShowChart";
-import TrackChangesIcon from "@mui/icons-material/TrackChanges";
-import LaunchIcon from "@mui/icons-material/Launch";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
+import navigationItems from "./navigationItems";
 
 export interface SidebarProps {
   gridArea: string;
@@ -23,32 +21,14 @@ export interface SidebarProps {
 
 export const Sidebar: React.FC<SidebarProps> = ({ gridArea }) => {
   return (
-    <Box
-      sx={{
-        maxWidth: "370px",
-        boxShadow: 3,
-        gridArea,
-      }}
-    >
-      <Box
-        className="logo"
-        sx={{
-          height: "150px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+    <Box sx={style(gridArea)}>
+      <Box className="logo">
         <Typography variant="h3">Logo</Typography>
       </Box>
       <Divider light />
       <Box component="nav">
-        <List
-          sx={{
-            minHeight: "70vh",
-          }}
-        >
-          {NavigatorItems.map((item, key) => (
+        <List className="navigator-list">
+          {navigationItems.map((item, key) => (
             <ListItem key={key} disablePadding>
               <ListItemButton>
                 <ListItemIcon>{item.icon}</ListItemIcon>
@@ -83,25 +63,19 @@ export const Sidebar: React.FC<SidebarProps> = ({ gridArea }) => {
 
 export default Sidebar;
 
-const NavigatorItems: { title: string; icon: JSX.Element }[] = [
-  {
-    title: "Dashboard",
-    icon: <DashboardIcon />,
+const style = (gridArea: string): SxProps<Theme> => ({
+  maxWidth: "370px",
+  boxShadow: 3,
+  gridArea,
+
+  ".logo": {
+    height: "150px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  {
-    title: "Lançamento",
-    icon: <LaunchIcon />,
+
+  ".navigator-list": {
+    minHeight: "70vh",
   },
-  {
-    title: "Fluxo de Caixa",
-    icon: <VisibilityIcon />,
-  },
-  {
-    title: "Investimentos",
-    icon: <ShowChartIcon />,
-  },
-  {
-    title: "Metas",
-    icon: <TrackChangesIcon />,
-  },
-];
+});

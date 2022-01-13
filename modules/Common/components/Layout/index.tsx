@@ -9,7 +9,7 @@ export interface LayoutProps {}
 
 export const Layout: React.FC<LayoutProps> = () => {
   return (
-    <Box sx={style}>
+    <Box sx={style()}>
       <Header gridArea="header" />
       <Sidebar gridArea="sidebar" />
       <MainContent gridArea="main" />
@@ -19,11 +19,12 @@ export const Layout: React.FC<LayoutProps> = () => {
 
 export default Layout;
 
-const style: SxProps<Theme> = {
+const style = (): SxProps<Theme> => ({
   display: "grid",
   gridTemplateAreas: `"header header header header"
                       "sidebar main main main"
                       "sidebar main main main"
                       "siderbar footer footer footer"`,
+
   gridTemplateColumns: "370px 1fr 1fr 1fr",
-};
+});
