@@ -1,6 +1,6 @@
+import React from "react";
 import { Box, SxProps } from "@mui/material";
 import { Theme } from "@mui/system";
-import React from "react";
 import Header from "../Header";
 import MainContent from "../MainContent";
 import Sidebar from "../Sidebar";
