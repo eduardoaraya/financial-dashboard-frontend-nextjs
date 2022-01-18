@@ -1,6 +1,6 @@
-import { AppBar, Avatar, Box, IconButton, Tooltip } from "@mui/material";
-import { SxProps, Theme } from "@mui/system";
 import React from "react";
+import { SxProps, Theme } from "@mui/system";
+import { AppBar, Avatar, Box, IconButton, Tooltip } from "@mui/material";
 
 export interface HeaderProps {
   avatarPhoto?: string;
