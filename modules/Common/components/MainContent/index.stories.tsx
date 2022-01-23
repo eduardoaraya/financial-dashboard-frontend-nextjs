@@ -13,5 +13,4 @@ export const Primary = template.bind({});
 
 Primary.args = {
   title: "Main content title",
-  gridArea: "main",
 };
