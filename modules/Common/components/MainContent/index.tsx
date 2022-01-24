@@ -32,13 +32,11 @@ const style = (): SxProps<Theme> => ({
   paddingTop: "66px",
   ".wrapper": {},
   ".page-title": {
-    boxShadow: 1,
-    padding: "45px",
+    padding: "35px",
   },
   ".page-main-content": {
-    background: "#DDD",
     height: "100%",
     minHeight: "70vh",
-    padding: "45px",
+    padding: "35px",
   },
 });
