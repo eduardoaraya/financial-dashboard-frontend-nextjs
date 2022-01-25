@@ -3,7 +3,7 @@ import { Meta, Story } from "@storybook/react";
 import { DashboardPage, DashboardPageProps } from "./index";
 
 export default {
-  title: "Dashboard/ Index",
+  title: "Dashboard/ Pages/ Index",
   component: DashboardPage,
 } as Meta<DashboardPageProps>;
 

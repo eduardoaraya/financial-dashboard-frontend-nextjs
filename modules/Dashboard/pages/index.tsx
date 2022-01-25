@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
-import Pie from "modules/Chart/components/Pie";
+import Table from "../../Common/components/Table";
+import Pie from "../../Chart/components/Pie";
 import Layout from "../../Common/components/Layout";
 import PaperInfo from "../../Common/components/PaperInfo";
 
@@ -8,17 +9,17 @@ export interface DashboardPageProps {}
 export const DashboardPage: React.FC<DashboardPageProps> = () => {
   return (
     <Layout titlePage="Welcome, Danyel">
-      <Grid container flexDirection={"row"} gap={"10px"} flexWrap={"nowrap"}>
-        <Grid item lg={3} flex={1}>
+      <Grid container flexDirection={"row"} gap={"10px"}>
+        <Grid item lg={2.5}>
           <PaperInfo title="Entrada" value="R$ 1.350,00" />
         </Grid>
-        <Grid item lg={3} flex={1}>
+        <Grid item lg={2.5}>
           <PaperInfo title="Saída" value="R$ 1.000,00" />
         </Grid>
-        <Grid item lg={3} flex={1}>
+        <Grid item lg={2.5}>
           <PaperInfo title="Balanço" value="R$ 350,00" />
         </Grid>
-        <Grid item lg={3} flex={1}>
+        <Grid item lg={2.5}>
           <PaperInfo title="Investimentos" value="R$ 1.000.000,00" />
         </Grid>
       </Grid>
@@ -44,6 +45,14 @@ export const DashboardPage: React.FC<DashboardPageProps> = () => {
           <Box sx={{ maxWidth: "360px" }}>
             <Pie />
           </Box>
+        </Grid>
+      </Grid>
+      <Grid container sx={{ height: "300px" }}>
+        <Grid item lg={6} sx={{ padding: "20px" }}>
+          <Table />
+        </Grid>
+        <Grid item lg={6} sx={{ padding: "20px" }}>
+          <Table />
         </Grid>
       </Grid>
     </Layout>

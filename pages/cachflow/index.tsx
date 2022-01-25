@@ -1,8 +1,8 @@
-import DashboardPage from "modules/Dashboard/pages";
+import CacheFlowPage from "modules/CachFlow/pages";
 import type { NextPage } from "next";
 
 const Index: NextPage = () => {
-  return <DashboardPage />;
+  return <CacheFlowPage />;
 };
 
 export default Index;
