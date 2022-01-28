@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
-import Layout from "modules/Common/components/Layout";
-import Table from "modules/Common/components/Table";
+import Layout from "libs/Common/components/Layout";
+import Table from "libs/Common/components/Table";
 import React from "react";
 
 const CacheFlowPage: React.FC = () => {

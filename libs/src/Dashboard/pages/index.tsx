@@ -1,8 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
-import Table from "../../Common/components/Table";
-import Pie from "../../Chart/components/Pie";
-import Layout from "../../Common/components/Layout";
-import PaperInfo from "../../Common/components/PaperInfo";
+import Table from "@core/Common/components/Table";
+import Pie from "@core/Chart/components/Pie";
+import Layout from "@core/Common/components/Layout";
+import PaperInfo from "@core/Common/components/PaperInfo";
 
 export interface DashboardPageProps {}
 

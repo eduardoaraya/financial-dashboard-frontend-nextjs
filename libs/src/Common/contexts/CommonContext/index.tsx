@@ -1,5 +1,6 @@
+import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../../styles/theme";
+import theme from "@libs/src/Common/styles/theme";
 
 export interface CommonContextProps {}
 

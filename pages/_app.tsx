@@ -1,5 +1,5 @@
-import CommonContext from "modules/Common/contexts/CommonContext";
-import createEmotionCache from "modules/Common/contexts/CommonContext/utils";
+import CommonContext from "@core/Common/contexts/CommonContext";
+import createEmotionCache from "@core/Common/contexts/CommonContext/utils";
 import { AppProps } from "next/app";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";

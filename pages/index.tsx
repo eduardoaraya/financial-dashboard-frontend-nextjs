@@ -1,4 +1,4 @@
-import DashboardPage from "modules/Dashboard/pages";
+import DashboardPage from "@core/Dashboard/pages";
 import type { NextPage } from "next";
 
 const Index: NextPage = () => {

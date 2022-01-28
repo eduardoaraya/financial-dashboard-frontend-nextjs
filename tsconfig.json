@@ -20,13 +20,14 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "modules/*": ["./modules/*"]
+      "@core/*": ["libs/src/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "./libs/**/*"
   ],
   "exclude": [
     "node_modules"

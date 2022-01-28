@@ -1,4 +1,4 @@
-import CacheFlowPage from "modules/CachFlow/pages";
+import CacheFlowPage from "libs/src/CashFlow/pages";
 import type { NextPage } from "next";
 
 const Index: NextPage = () => {
