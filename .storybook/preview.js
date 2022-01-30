@@ -1,6 +1,6 @@
 import React from "react";
 
-import CommongContext from "../modules/Common/contexts/CommonContext";
+import CommongContext from "../libs/src/Common/contexts/CommonContext/index";
 
 export const decorators = [
   (Story) => (

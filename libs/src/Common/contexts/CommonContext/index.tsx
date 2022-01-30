@@ -1,7 +1,8 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "@libs/src/Common/styles/theme";
+import theme from "@core/Common/styles/theme";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface CommonContextProps {}
 
 const CommonContext: React.FC<CommonContextProps> = ({
